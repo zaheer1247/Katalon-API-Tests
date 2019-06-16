@@ -13,5 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('ThomasBayerCustomer12/SQLRestCustomer'))
+'Use this Request to Get Employee Details from DummyRestAPI website\r\n\r\nRef:\r\nhttp://dummy.restapiexample.com/api'
+ResponseEmployee = WS.sendRequestAndVerify(findTestObject('DummyRestAPI/DummyRestAPIEmployees'))
+
+WS.verifyResponseStatusCode(ResponseEmployee, 200)
+
+WS.verifyElementsCount(ResponseEmployee, 'employee_name', 98)
+
+'Use this Request to get the boolean response for Employee \r\n\r\nhttp://dummy.restapiexample.com/api/v1/employee/1'
+not_run: ResponseEmployeeBoolean = WS.sendRequest(findTestObject('DummyRestAPI/DummyRestAPIBoolean'))
+
+not_run: WS.verifyMatch(ResponseEmployeeBoolean, '', false)
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Thomas Bayer Customer 45 </description>
-   <name>Rest Request</name>
+   <description></description>
+   <name>DummyRestAPIEmployeeData</name>
    <tag></tag>
-   <elementGuidId>5d8e8bd0-2518-4ef3-a7da-2072c05c3a89</elementGuidId>
+   <elementGuidId>53259e75-8dd9-44a9-ad30-7fa826f60ee8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -12,7 +12,7 @@
    <httpBodyType></httpBodyType>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>http://www.thomas-bayer.com/sqlrest/CUSTOMER/12</restUrl>
+   <restUrl>http://dummy.restapiexample.com/employee/52698</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -31,9 +31,6 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-WS.verifyResponseStatusCode(response, 2001)
-
-assertThat(response.getStatusCode()).isEqualTo(2001)</verificationScript>
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

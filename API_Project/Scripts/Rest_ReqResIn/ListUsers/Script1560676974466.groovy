@@ -13,5 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('ThomasBayerCustomer12/SQLRestCustomer'))
+response = WS.sendRequestAndVerify(findTestObject('Rest_ReqResIn/ListUsers'))
+
+WS.verifyResponseStatusCode(response, 200)
+
+WS.verifyElementPropertyValue(response, 'data[1].first_name', 'Charles')
+
+WS.verifyElementText(response, 'data[1].first_name', 'Charles')
+
+WS.verifyElementsCount(reponse, 'data[1].first_name', 2)
+
+WS.verifyElementsCount(response, 'employee_name', 98)
 

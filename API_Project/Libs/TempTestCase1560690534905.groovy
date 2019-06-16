@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\ZAHEER~1.ABB\\AppData\\Local\\Temp\\Katalon\\Test Cases\\ThomasBayer\\Customer\\20190616_133325\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\ZAHEER~1.ABB\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Rest_ReqResIn\\ListUsers\\20190616_183854\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/ThomasBayer/Customer', new TestCaseBinding('Test Cases/ThomasBayer/Customer',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Rest_ReqResIn/ListUsers', new TestCaseBinding('Test Cases/Rest_ReqResIn/ListUsers',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

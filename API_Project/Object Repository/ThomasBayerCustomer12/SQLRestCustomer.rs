@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description></description>
-   <name>getBank</name>
+   <description>Thomas Bayer Customer 45 </description>
+   <name>SQLRestCustomer</name>
    <tag></tag>
-   <elementGuidId>037f9004-1cd0-47f5-a815-84b178e779cf</elementGuidId>
+   <elementGuidId>5d8e8bd0-2518-4ef3-a7da-2072c05c3a89</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
    <httpBodyType></httpBodyType>
-   <restRequestMethod></restRequestMethod>
-   <restUrl></restUrl>
-   <serviceType>SOAP</serviceType>
-   <soapBody>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:tns=&quot;http://thomas-bayer.com/blz/&quot;>
-  &lt;SOAP-ENV:Header/>
-  &lt;SOAP-ENV:Body>
-    &lt;tns:getBank/>
-  &lt;/SOAP-ENV:Body>
-&lt;/SOAP-ENV:Envelope>
-</soapBody>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>http://www.thomas-bayer.com/sqlrest/CUSTOMER/12</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
    <soapHeader></soapHeader>
-   <soapRequestMethod>SOAP</soapRequestMethod>
-   <soapServiceFunction>getBank</soapServiceFunction>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceFunction></soapServiceFunction>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -36,6 +31,9 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-</verificationScript>
-   <wsdlAddress>http://www.thomas-bayer.com/axis2/services/BLZService?wsdl</wsdlAddress>
+
+WS.verifyResponseStatusCode(response, 2001)
+
+assertThat(response.getStatusCode()).isEqualTo(2001)</verificationScript>
+   <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

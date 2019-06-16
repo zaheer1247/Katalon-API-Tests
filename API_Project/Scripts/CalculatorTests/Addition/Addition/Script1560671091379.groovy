@@ -16,5 +16,5 @@ import internal.GlobalVariable as GlobalVariable
 'SOAP Request'
 not_run: WS.sendRequest(findTestObject('CalculatorSoapService/Addition'))
 
-WS.sendRequestAndVerify(findTestObject('ThomasBayerCustomer12/Rest Request'))
+WS.sendRequestAndVerify(findTestObject('ThomasBayerCustomer12/SQLRestCustomer'))
 
