@@ -12,7 +12,7 @@
    <httpBodyType></httpBodyType>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>http://www.thomas-bayer.com/sqlrest/CUSTOMER/45</restUrl>
+   <restUrl>http://www.thomas-bayer.com/sqlrest/CUSTOMER/12</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -32,8 +32,8 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 2001)
 
-assertThat(response.getStatusCode()).isEqualTo(200)</verificationScript>
+assertThat(response.getStatusCode()).isEqualTo(2001)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
