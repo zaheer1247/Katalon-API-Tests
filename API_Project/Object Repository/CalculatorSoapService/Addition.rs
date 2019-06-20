@@ -38,8 +38,8 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 302)
 
-assertThat(response.getStatusCode()).isEqualTo(200)</verificationScript>
+assertThat(response.getStatusCode()).isEqualTo(302)</verificationScript>
    <wsdlAddress>http://www.dneonline.com/calculator.asmx?WSDL</wsdlAddress>
 </WebServiceRequestEntity>
